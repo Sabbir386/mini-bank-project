@@ -1,6 +1,10 @@
 document.getElementById('btn-deposit').addEventListener('click', function(){
     //current deposait Amount
     const newDepositAmount=getInputFieldElementById('input-field');
+    if(isNaN(newDepositAmount)){
+        alert('please provide a valid input');
+        return;
+    }
 
     //previous total deposait Amount
     const previousDepositAmount=previousAmountGetElementById('deposit-total');
